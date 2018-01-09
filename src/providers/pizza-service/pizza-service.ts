@@ -16,8 +16,8 @@ import { Pizza } from '../../models/pizza'
 
 
     //private readonly url = "http://localhost:8080/pizza/";
-    //private readonly url = "http://10.13.0.248:3000/pizza"
-    private readonly url = "http://10.13.0.248:3000/pizza";
+    private readonly url = "http://10.13.0.248:3000/pizza/"
+    //private readonly url = "pizza.json";
 
     constructor(private http: HttpClient)
     {
@@ -40,5 +40,32 @@ import { Pizza } from '../../models/pizza'
           }
             resolve(rt);});
       });
+    }
+
+    getByiD(id: number)
+    {
+      return new Promise(resolve =>{
+        this.http.get(this.url)
+        .subscribe((data:Pizza)=>{
+          resolve(new Pizza(data['id'], data['name'], data['desc'], data['picture'], data['price']))
+        })
+      })
+    }
+
+    delete(id: number)
+    {
+      return new Promise(resolve =>{
+        this.http.delete(this.url + id).subscribe(
+            resp => console.log('deleted'),
+            error => console.log('Impossible de supprimer.')
+        );
+      })
+    }
+
+    add(id, name, desc, picture, price)
+    {
+      return new Promise(resolve =>{
+        
+      })
     }
   }

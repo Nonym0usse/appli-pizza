@@ -1,11 +1,17 @@
+<!--
+  Generated template for the SuppressionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Pizzeria VELLA - La Carte</ion-title>
+    <ion-title>Suppression</ion-title>
   </ion-navbar>
+
 </ion-header>
+
 
 <ion-content padding>
   <ion-card *ngFor="let pizza of mypizza">
@@ -17,6 +23,7 @@
       <p>
         {{ pizza.desc}}
       </p>
+      <button ion-button color="secondary" (click)='suppression(pizza.id);'>Suppression</button>
       <span style="float: right; color: blue">{{pizza.price}}€</span>
     </ion-card-content>
   </ion-card>
