@@ -14,7 +14,6 @@ import { Pizza } from '../../models/pizza'
   @Injectable()
   export class PizzaServiceProvider {
 
-    results: string;
 
     //private readonly url = "http://localhost:8080/pizza/";
     //private readonly url = "http://10.13.0.248:3000/pizza"

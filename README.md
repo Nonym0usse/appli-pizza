@@ -1,4 +1,4 @@
-Ingésup B3 - Martines Florian
+Ingésup B3 - VELLA CYRIL
 
 
 This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
@@ -26,4 +26,3 @@ $ ionic cordova run ios
 ```
 
 Substitute ios for android if not on a Mac.
-
