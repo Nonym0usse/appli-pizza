@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
+import { AjoutPage } from '../ajout/ajout';
 
 @Component({
   selector: 'page-home',
@@ -15,5 +16,11 @@ mypizza: any;
       this.mypizza = data;
       console.log(this.mypizza);
     });
+  }
+
+    modifpage(mapizza){
+    this.navCtrl.push(ModificationPage, {
+      param1: mapizza
+  });
   }
 }

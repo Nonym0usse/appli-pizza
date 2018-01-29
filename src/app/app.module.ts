@@ -8,6 +8,8 @@ import { ListPage } from '../pages/list/list';
 import { AjoutPage } from '../pages/ajout/ajout';
 import { SuppressionPage } from '../pages/suppression/suppression';
 import { ModificationPage } from '../pages/modification/modification';
+import { Camera } from '@ionic-native/camera';
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -40,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     PizzaServiceProvider
   ]

@@ -16,7 +16,7 @@ import { Pizza } from '../../models/pizza'
 
 
     //private readonly url = "http://localhost:8080/pizza/";
-    private readonly url = "http://10.13.0.248:3000/pizza/"
+    private readonly url = "http://kim.jcatania.io:3000/pizza/"
     //private readonly url = "pizza.json";
 
     constructor(private http: HttpClient)
@@ -62,10 +62,10 @@ import { Pizza } from '../../models/pizza'
       })
     }
 
-    add(id, name, desc, picture, price)
-    {
-      return new Promise(resolve =>{
-        
-      })
+    add(pizza: Pizza){
+        this.http.put(this.url+pizza.id, pizza).subscribe((data:any) => {
+          console.log(pizza.name);
+          console.log(pizza.desc);
+      });
     }
   }
