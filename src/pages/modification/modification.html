@@ -6,13 +6,33 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>modification</ion-title>
+  <ion-navbar color="dark">
+    <ion-title>Modification</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="pizzatheme">
+  <ion-list>
+
+    <ion-item>
+      <ion-label fixed>Prix à modifier</ion-label>
+      <ion-input type="number" value="" [(ngModel)]="pizza.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Name à modifier</ion-label>
+      <ion-input type="text"  [(ngModel)]="pizza.name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label fixed>Description à modifier</ion-label>
+      <ion-input type="text"  [(ngModel)]="pizza.desc"></ion-input>
+    </ion-item>
+
+  </ion-list>
+  <button ion-button color="dark" (click)="cammodif()">Changer Photos</button>
+<button ion-button color="dark" (click)="modif()">Valider</button>
 
 </ion-content>

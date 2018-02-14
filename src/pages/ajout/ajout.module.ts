@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { AjoutPage } from './ajout';
+import {Camera} from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -9,5 +10,8 @@ import { AjoutPage } from './ajout';
   imports: [
     IonicPageModule.forChild(AjoutPage),
   ],
+  providers: [
+        Camera
+  ]
 })
 export class AjoutPageModule {}

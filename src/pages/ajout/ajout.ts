@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
-import { Pizza } from '../../models/pizza';
 import { Camera } from '@ionic-native/camera';
-
+import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
+import { Pizza } from '../../model/pizza';
+import { HomePage } from '../home/home';
 /**
- * Generated class for the AjoutPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+* Generated class for the AjoutPage page.
+*
+* See https://ionicframework.com/docs/components/#navigation for more info on
+* Ionic pages and navigation.
+*/
 
 @IonicPage()
 @Component({
@@ -18,8 +18,30 @@ import { Camera } from '@ionic-native/camera';
 })
 export class AjoutPage {
   public base64Image: string;
+  pizza : Pizza = new Pizza();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private pizza: PizzaServiceProvider, private camera: Camera) {
-    this.pizza = this.navParams.data.param1;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pizzaprovid: PizzaServiceProvider,  private camera: Camera) {
   }
+
+
+  pizzaadd = [];
+
+  add(){
+
+    this.pizza.price =+ this.pizzaadd['prix'];
+    this.pizza.name = this.pizzaadd['nom'];
+    this.pizza.desc = this.pizzaadd['desc'];
+    this.pizzaprovid.addpizza(this.pizza).then((item) =>{
+      this.navCtrl.push(HomePage);
+    });
+  }
+
+  camadd(){
+    this.camera.getPicture().then((imagedata) =>{
+      this.base64Image = imagedata;
+      this.pizza.picture = 'data:image/png;base64,'+this.base64Image;
+      console.log(this.pizza);
+    });
+  }
+
 }
