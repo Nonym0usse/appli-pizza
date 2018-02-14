@@ -1,3 +1,13 @@
+/**
+ * @Author: VELLA CYRIL <nonym0usse>
+ * @Date:   2018-02-14T11:53:40+01:00
+ * @Email:  contact@vella.fr
+ * @Last modified by:   nonym0usse
+ * @Last modified time: 2018-02-14T17:58:43+01:00
+ */
+
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';

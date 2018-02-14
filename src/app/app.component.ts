@@ -1,3 +1,13 @@
+/**
+ * @Author: VELLA CYRIL <nonym0usse>
+ * @Date:   2018-02-14T11:53:40+01:00
+ * @Email:  contact@vella.fr
+ * @Last modified by:   nonym0usse
+ * @Last modified time: 2018-02-14T17:58:39+01:00
+ */
+
+
+
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
