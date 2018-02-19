@@ -51,6 +51,7 @@ export class HomePage {
     this.pizza.deletebyid(mapizza.id).then((item) =>{
       this.gethome();
     });
+    this.varDump("La pizza " + mapizza.name + " à été supprimée.");
   }
 
   varDump(message) {
@@ -61,16 +62,17 @@ export class HomePage {
     });
 
     toast.present();
+    this.vibration.vibrate(1000);
   }
 
   panier(mapizza){
     this.paniertab.push(mapizza);
     this.varDump("Et une " + mapizza.name + " ajoutée !");
-    this.vibration.vibrate(1000);
   }
 
   add(){
     this.navCtrl.push(AjoutPage);
+    this.varDump("Votre pizza " + mapizza.name + " été ajoutée à notre carte.")
   }
   seepanier(){
     this.navCtrl.push(PanierPage, {

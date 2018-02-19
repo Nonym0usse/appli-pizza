@@ -10,9 +10,6 @@
 
 <ion-content padding class="pizzatheme">
   <h3 class="title-carte">Découvrez notre carte</h3>
-  <div class="w3-light-grey w3-round">
-    <div class="w3-container w3-red w3-round" style="width:25%">25%</div>
-  </div>
   <ion-card *ngFor="let pizzaview of mypizza">
     <div class="position">
       <span class="bdo-custom">{{ pizzaview.price}}€</span>

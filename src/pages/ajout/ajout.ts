@@ -1,10 +1,10 @@
 /**
- * @Author: VELLA CYRIL <nonym0usse>
- * @Date:   2018-02-14T11:53:40+01:00
- * @Email:  contact@vella.fr
- * @Last modified by:   nonym0usse
- * @Last modified time: 2018-02-14T17:58:36+01:00
- */
+* @Author: VELLA CYRIL <nonym0usse>
+* @Date:   2018-02-14T11:53:40+01:00
+* @Email:  contact@vella.fr
+* @Last modified by:   nonym0usse
+* @Last modified time: 2018-02-14T17:58:36+01:00
+*/
 
 
 
@@ -37,10 +37,16 @@ export class AjoutPage {
   pizzaadd = [];
 
   add(){
-
-    this.pizza.price =+ this.pizzaadd['prix'];
+    if(this.pizzaadd['prix'] == null)
+    {
+      this.pizza.price =+ 0;
+    }else{
+      this.pizza.price =+ this.pizzaadd['prix'];
+    }
     this.pizza.name = this.pizzaadd['nom'];
     this.pizza.desc = this.pizzaadd['desc'];
+
+    console.log(this.pizza);
     this.pizzaprovid.addpizza(this.pizza).then((item) =>{
       this.navCtrl.push(HomePage);
     });
