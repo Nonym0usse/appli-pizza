@@ -6,9 +6,9 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title color="dark">DETAIL PIZZA - PIZZAVELLA</ion-title>
-    <p (click)="dismiss()">
+  <ion-navbar color="dark">
+    <ion-title>DETAIL PIZZA - PIZZAVELLA</ion-title>
+    <p (click)="dismiss()" class="close">
       Fermer
     </p>
   </ion-navbar>
@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="pizzatheme">
   <ion-card>
     <div class="position">
       <span class="bdo-custom">{{ pizzas.price}}€</span>
