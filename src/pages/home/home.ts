@@ -1,10 +1,10 @@
 /**
- * @Author: VELLA CYRIL <nonym0usse>
- * @Date:   2018-02-14T11:53:40+01:00
- * @Email:  contact@vella.fr
- * @Last modified by:   nonym0usse
- * @Last modified time: 2018-02-14T17:58:10+01:00
- */
+* @Author: VELLA CYRIL <nonym0usse>
+* @Date:   2018-02-14T11:53:40+01:00
+* @Email:  contact@vella.fr
+* @Last modified by:   nonym0usse
+* @Last modified time: 2018-02-14T17:58:10+01:00
+*/
 
 
 
@@ -12,11 +12,15 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
 import { ModificationPage } from '../modification/modification';
+import { DetailPage } from '../detail/detail';
+
 import { PanierPage } from '../panier/panier';
 import { AjoutPage } from '../ajout/ajout';
 import { Pizza } from '../../model/pizza';
 import { ToastController } from 'ionic-angular';
 import { Vibration } from '@ionic-native/vibration';
+import { ModalController, NavParams } from 'ionic-angular';
+
 
 @Component({
   selector: 'page-home',
@@ -26,7 +30,7 @@ import { Vibration } from '@ionic-native/vibration';
 export class HomePage {
   paniertab = new Array<Pizza>();
   mypizza : any;
-  constructor(public navCtrl: NavController, private pizza: PizzaServiceProvider, private toastCtrl: ToastController, private vibration: Vibration) {
+  constructor(public navCtrl: NavController, private pizza: PizzaServiceProvider, private toastCtrl: ToastController, private vibration: Vibration, public modalCtrl: ModalController) {
     this.gethome();
     this.pizza.getById(2).then((item: any) => {
     });
@@ -35,7 +39,6 @@ export class HomePage {
   gethome(){
     this.pizza.get().then((items: Array<any>) => {
       this.mypizza = items;
-      console.log(items);
     });
   }
 
@@ -73,5 +76,11 @@ export class HomePage {
     this.navCtrl.push(PanierPage, {
       param1: this.paniertab
     });
+  }
+
+  detail(mapizza)
+  {
+    let profileModal = this.modalCtrl.create(DetailPage, {mapizza});
+    profileModal.present();
   }
 }

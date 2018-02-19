@@ -16,6 +16,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { ModificationPageModule } from '../pages/modification/modification.module';
+import { DetailPageModule } from '../pages/detail/detail.module';
 import { PanierPageModule } from '../pages/panier/panier.module';
 import { AjoutPageModule } from '../pages/ajout/ajout.module';
 import { Vibration } from '@ionic-native/vibration';
@@ -35,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     ModificationPageModule,
     PanierPageModule,
+    DetailPageModule,
     AjoutPageModule,
     IonicModule.forRoot(MyApp),
     HttpClientModule
