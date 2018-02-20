@@ -79,10 +79,4 @@ export class HomePage {
       param1: this.paniertab
     });
   }
-
-  detail(mapizza)
-  {
-    let profileModal = this.modalCtrl.create(DetailPage, {mapizza});
-    profileModal.present();
-  }
 }
