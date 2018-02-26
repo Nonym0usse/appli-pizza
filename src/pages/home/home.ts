@@ -2,8 +2,8 @@
 * @Author: VELLA CYRIL <nonym0usse>
 * @Date:   2018-02-14T11:53:40+01:00
 * @Email:  contact@vella.fr
-* @Last modified by:   nonym0usse
-* @Last modified time: 2018-02-14T17:58:10+01:00
+ * @Last modified by:   nonym0usse
+ * @Last modified time: 2018-02-26T16:43:20+01:00
 */
 
 
@@ -12,14 +12,13 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
 import { ModificationPage } from '../modification/modification';
-import { DetailPage } from '../detail/detail';
 
 import { PanierPage } from '../panier/panier';
 import { AjoutPage } from '../ajout/ajout';
 import { Pizza } from '../../model/pizza';
 import { ToastController } from 'ionic-angular';
 import { Vibration } from '@ionic-native/vibration';
-import { ModalController, NavParams } from 'ionic-angular';
+import { ModalController } from 'ionic-angular';
 
 
 @Component({
@@ -70,7 +69,7 @@ export class HomePage {
     this.varDump("Et une " + mapizza.name + " ajoutée !");
   }
 
-  add(){
+  add(mapizza){
     this.navCtrl.push(AjoutPage);
     this.varDump("Votre pizza " + mapizza.name + " été ajoutée à notre carte.")
   }

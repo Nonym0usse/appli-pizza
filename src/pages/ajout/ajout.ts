@@ -2,15 +2,15 @@
 * @Author: VELLA CYRIL <nonym0usse>
 * @Date:   2018-02-14T11:53:40+01:00
 * @Email:  contact@vella.fr
-* @Last modified by:   nonym0usse
-* @Last modified time: 2018-02-14T17:58:36+01:00
+ * @Last modified by:   nonym0usse
+ * @Last modified time: 2018-02-26T16:40:25+01:00
 */
 
 
 
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Camera } from '@ionic-native/camera';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 import { PizzaServiceProvider } from '../../providers/pizza-service/pizza-service';
 import { Pizza } from '../../model/pizza';
 import { HomePage } from '../home/home';
@@ -53,7 +53,17 @@ export class AjoutPage {
   }
 
   camadd(){
-    this.camera.getPicture().then((imagedata) =>{
+
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      saveToPhotoAlbum: true,
+    }
+
+
+    this.camera.getPicture(options).then((imagedata) =>{
       this.base64Image = imagedata;
       this.pizza.picture = 'data:image/png;base64,'+this.base64Image;
       console.log(this.pizza);

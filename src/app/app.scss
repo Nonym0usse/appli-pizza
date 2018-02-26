@@ -1,3 +1,11 @@
+// @Author: VELLA CYRIL <nonym0usse>
+// @Date:   2018-02-14T11:53:40+01:00
+// @Email:  contact@vella.fr
+// @Last modified by:   nonym0usse
+// @Last modified time: 2018-02-26T16:52:37+01:00
+
+
+
 // http://ionicframework.com/docs/theming/
 
 
@@ -17,3 +25,15 @@
 .myBg{
    background-color:#red;
  }
+
+ .pizzatheme{
+   background-image: url('../assets/imgs/pizza-back.png');
+   background-size: 100% 100%;
+   background-repeat: no-repeat;
+   flex: 1;
+ }
+
+ .button-style{
+  background-color: rgba(255,255, 255, 0);
+  color: #FFF;
+}

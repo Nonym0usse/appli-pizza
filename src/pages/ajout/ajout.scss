@@ -1,3 +1,11 @@
+// @Author: VELLA CYRIL <nonym0usse>
+// @Date:   2018-02-14T11:53:40+01:00
+// @Email:  contact@vella.fr
+// @Last modified by:   nonym0usse
+// @Last modified time: 2018-02-26T16:54:10+01:00
+
+
+
 page-ajout {
   .pizzatheme{
     background-image: url('../assets/imgs/pizza-back.png');
@@ -5,8 +13,15 @@ page-ajout {
     background-repeat: no-repeat;
     flex: 1;
   }
-  input[type="text"] {
-    width: 100%;
-    display: table;
+  
+  #rounded {
+      width: 100%;
+      height: 50px;
+      -moz-border-radius: 50px;
+      -webkit-border-radius: 50px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background-color: rgba(255, 255, 255, 0);
+      color: #FFF;
   }
 }

@@ -15,24 +15,20 @@
 
 
 <ion-content padding class="pizzatheme">
-<ion-list>
-
-  <ion-item>
+  <ion-item id="rounded">
     <ion-label fixed>Prix</ion-label>
     <ion-input type="number" [(ngModel)]="pizzaadd.prix" required></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item id="rounded">
     <ion-label fixed>Nom de la pizza</ion-label>
     <ion-input type="text" [(ngModel)]="pizzaadd.nom" required></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item id="rounded">
     <ion-label fixed>Description de la pizza</ion-label>
     <ion-input type="text" [(ngModel)]="pizzaadd.desc" required></ion-input>
   </ion-item>
-
-</ion-list>
 <button ion-button color="dark" (click)="camadd()">Ajouter Photos</button>
 <button ion-button color="dark" (click)="add()">Valider</button>
 

@@ -1,40 +1,48 @@
+// @Author: VELLA CYRIL <nonym0usse>
+// @Date:   2018-02-14T11:53:40+01:00
+// @Email:  contact@vella.fr
+// @Last modified by:   nonym0usse
+// @Last modified time: 2018-02-26T16:58:05+01:00
+
+
+
 page-panier {
   .pizzatheme{
-    background-image: url('../assets/imgs/panier.png');
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      flex: 1;
-    }
-    .title-carte{
-      text-align: center;
-      color: #FFF;
-    }
-    .panier-vide{
-      text-align: center;
-      color: #FFF;
-    }
-    .bdo-custom{
-      margin: -72px;
-      background: rgb(227, 28, 18)!important;
-      transform: rotate(45deg)!important;
-      padding: 13px 59px!important;
-      width: 400px !important;
-      text-align: right !important;
-      color: rgb(255, 255, 255)!important;
-      text-transform: uppercase!important;
-      line-height: 9px!important;
-      overflow: hidden!important;
-      z-index: 3!important;
-      height: auto!important;
-      -webkit-transition: inherit!important;
-      display: block!important;
-      text-indent: inherit!important;
-      font-size: 16px;
-      float: right;
-    }
-    .text-title{
-      text-align: center;
-      background-color: black;
-      color: #FFF;
-    }
+    background-image: url('../assets/imgs/pizza-back.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    flex: 1;
+  }
+  .title-carte{
+    text-align: center;
+    color: #FFF;
+  }
+  .panier-vide{
+    text-align: center;
+    color: #FFF;
+  }
+  .bdo-custom{
+    margin: -72px;
+    background: rgb(227, 28, 18)!important;
+    transform: rotate(45deg)!important;
+    padding: 13px 59px!important;
+    width: 400px !important;
+    text-align: right !important;
+    color: rgb(255, 255, 255)!important;
+    text-transform: uppercase!important;
+    line-height: 9px!important;
+    overflow: hidden!important;
+    z-index: 3!important;
+    height: auto!important;
+    -webkit-transition: inherit!important;
+    display: block!important;
+    text-indent: inherit!important;
+    font-size: 16px;
+    float: right;
+  }
+  .text-title{
+    text-align: center;
+    background-color: black;
+    color: #FFF;
+  }
 }
